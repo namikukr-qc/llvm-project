@@ -69,6 +69,9 @@ public:
                           const MCSymbolRefExpr *To, uint64_t Count) override;
   void finishImpl() override;
 
+  // ARM64EC specific
+  virtual bool consumeAsmFunc() { return false; }
+
   /// \}
 
 protected:
